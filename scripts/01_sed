@@ -1,8 +1,9 @@
-i#!/bin/bash
+#!/bin/bash
 
 RUNTEST_PATH="$RSTRNT_TASKPATH/runtest.sh"
 
 sed -i '/. \/usr\/bin\/rhts-environment.sh || exit 1/d' "$RUNTEST_PATH"
 echo "$RUNTEST_PATH" >> /root/changed_tests
+
 
 exec "$@"
